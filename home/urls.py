@@ -10,4 +10,6 @@ urlpatterns = [
     path("order", views.order, name="order"),
     path("clothes", views.product_list, name="product_list"),
     path("books", views.books, name="books"),
+    path("kitchen", views.kitchen, name="kitchen"),
+    path("sports", views.sports, name="sports"),
 ]

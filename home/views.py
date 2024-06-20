@@ -47,3 +47,7 @@ def product_list(request):
 
 def books(request):
     return render(request, "Books.html")
+
+
+def sports(request):
+    return render(request, "sports.html")
