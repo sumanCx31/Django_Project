@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}KitchenItems{% endblock title %}
+
+{% block body %}
+    {% comment %} <h1>Sale Products</h1> {% endcomment %}
+    <div class="container my-2">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-20" style="width: 250px;">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="card-text"> <strong>Price: ${{ product.price }}</strong> </p>
+                        <a href="#" class="btn btn-primary">Add to cart <i class="bi bi-cart4"></i></a>
+                        <a href="/order" class="btn btn-primary my-2 ">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <li>No products on sale currently.</li>
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock body %}

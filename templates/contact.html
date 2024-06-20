@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Sign in{% endblock title %}
+
+{% block body %}
+
+<img src="https://static.vecteezy.com/ti/photos-gratuite/t1/20804109-la-communication-et-la-technologie-concept-main-en-mettant-en-bois-bloquer-cube-symbole-telephone-e-mail-adresse-site-internet-page-contact-nous-ou-email-commercialisation-contact-nous-dans-client-soutien-concept-photo.jpg width="800" height="400"" class="card-img-top" alt="...">
+<br>
+<div class="container" px-6 my-1>
+  <form method="POST" action="/contact">
+    {% csrf_token %}
+    <div class="mb-3">
+    <label for="name" class="form-label">Your Name:</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address:</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="number" class="form-label">Contact Number:</label>
+    <input type="text" class="form-control" id="number" name="number" placeholder="Contact Number">
+  </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Remark:</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="reset" class="btn btn-danger">Reset</button>
+</form>
+</div>
+{% endblock body %}
