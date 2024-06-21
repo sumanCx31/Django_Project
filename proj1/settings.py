@@ -142,3 +142,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 800,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'plugins': 'link image code',
+    'toolbar': 'undo redo | formatselect | ' +
+               'bold italic backcolor | alignleft aligncenter ' +
+               'alignright alignjustify | bullist numlist outdent indent | ' +
+               'removeformat | link image | code'
+}
