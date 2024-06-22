@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from home.models import Books, custumber
+from home.models import Books, custumber, Sports
 from home.models import Product
 from django.contrib import messages
 
@@ -46,10 +46,12 @@ def product_list(request):
 
 
 def books(request):
-    books = (
-        Books.objects.all()
-    )  # Adjust queryset as needed (e.g., filter by category)
+    books = Books.objects.all()  # Adjust queryset as needed (e.g., filter by category)
     return render(request, "Books.html", {"books": books})
 
+
 def sports(request):
-    return render(request, "sports.html")
+    sports = (
+        Sports.objects.all()
+    )  # Adjust queryset as needed (e.g., filter by category)
+    return render(request, "Sports.html", {"sports": sports})
