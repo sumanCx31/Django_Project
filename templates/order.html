@@ -5,23 +5,82 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>order</title>
    <style>
+      body{
+         font-weight: bolder;
+         color: rgb(0, 0, 0);
+         background-image: url(https://cdn2.mageplaza.com/media/general/OnWj0is.png);
+      }
 .container{
-   margin-top: 255px;
+   margin: 100px 400px;
    text-align: center;
-   border: 2px solid red;
-   height: 400px;
+   border: 1px solid rgb(88, 85, 85);
+   border-radius: 10px;
+   height: 450px;
    width: 300px;
+   background-color: rgb(224, 243, 243);
+   font-style: oblique;
+}
+.submit:hover{
+   background-color: rgb(0, 92, 252);
+   color: white;
+}
+.submit{
+   height: 30px;
+   width: 250px;
+   border-radius: 20px;
+   background-color: rgb(0, 92, 252);
+   font-style: oblique;
+}
+.s1:hover{
+   border: 2px solid blueviolet ;
+}
+.s1{
+   height: 25px;
+   width: 250px;
+   border-radius: 20px;
 }
 .form1{
-   margin-top: 3px;
+   margin-top: 30px;
+}
+.step{
+   margin-top: 15px;
 }
    </style>
 </head>
 <body>
+  
+   </div>
    <div class="container">
       <div class="form1">
-         <form action="">
-         Name:<input type="text">
+         <form action=""> 
+            <div class="step">
+      <a href="/"> <h2 style="color: blueviolet; text-decoration: underline; font-style: normal;">ATZ SuperMarket</h2></a>
+         Name:<input type="text" style="text-align: center"; class="s1" placeholder="Your name" >
+         
+         
+         <div class="step">Sizes:
+            <br>
+         <select name="items" class="s1" id="">
+            <option value="">M</option>
+            <option value="">L</option>
+            <option value="">XL</option>
+            <option value="">XXL</option>
+         </select></div>
+         <div class="step">
+         <label for="points">Quantities:</label>
+  <input type="number" class="s1" id="points" name="points" step="1" placeholder="Number of quantities" style="text-align: center;">
+
+</div>
+<div class="step">
+  Location: <input type="text"  class="s1" placeholder="Your location" style="text-align: center";>
+</div>
+
+<div class="step">
+   Do you have membership: <input type="checkbox" name="" id="">
+ </div>
+ <div class="step">
+   <input type="submit" class="submit" value="Order">
+ </div>
       </form>
    </div>
       
