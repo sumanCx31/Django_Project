@@ -38,6 +38,10 @@ def order(request):
     return render(request, "order.html")
 
 
+def cart(request):
+    return render(request, "cart.html")
+
+
 def product_list(request):
     products = (
         Product.objects.all()
